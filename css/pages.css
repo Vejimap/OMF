@@ -297,29 +297,3 @@ footer ul li {
         width: 30vw;
     }
 }
-
-button {
-    color: white;
-    font-size: medium;
-    border: none;
-    padding: 18px;
-    width: 225px;
-    height: 50px;
-    padding-top: 15px;
-    border-radius: 32px;
-    box-shadow: 2px 5px 15px -7px black;
-    margin-top: 15px;
-    background-image: linear-gradient(to top left,
-            rgba(147, 86, 220, 0.9),
-            rgba(225, 121, 218, 0.9) 70%);
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-    cursor: pointer;
-}
-
-.menu button:hover {
-    background-image: linear-gradient(to top left,
-            rgba(225, 121, 218, 0.9),
-            rgba(147, 86, 220, 0.9));
-}
