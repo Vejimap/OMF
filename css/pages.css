@@ -109,18 +109,20 @@ strong {
 .like .fa-solid:hover {
     opacity: 1;
 }
-
-.menu h3 {
+.menu h3::after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid #99e2d0;
     padding-bottom: 6px;
+    width: 40px;
+}
+.menu h3 {
     margin-bottom: 15px;
     font-weight: normal;
     font-size: 15px;
 }
 
-.menu h3::before {
-    border-bottom: 4px solid #99e2d0;
-    width: 40px;
-}
+
 
 .starters {
     margin-left: 20px;
