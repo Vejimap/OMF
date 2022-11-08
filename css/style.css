@@ -1,15 +1,18 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-family: "Roboto", "sans-serif";
   overflow-x: hidden;
 }
+
 header {
   padding-bottom: 20px;
   padding-top: 15px;
 }
+
 #logo {
   display: block;
   margin-right: auto;
@@ -17,6 +20,62 @@ header {
   margin-top: 30px;
   width: 180px;
 }
+
+.search-input {
+  background: transparent;
+  border: none;
+}
+
+/*Loader animation*/
+.loader {
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.8;
+  animation: vanishing 100ms 2s forwards;
+  animation-duration: 0.5ms;
+}
+
+.loader::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-top: solid #99e2d0 15px;
+  border-left: solid #FF79DA 10px;
+  border-bottom: solid #9356DC 5px;
+  border-right: solid 10px transparent;
+  border-radius: 50%;
+  animation: spin 1s ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes vanishing {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleY(0);
+  }
+
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
 /* Localisation main */
 main .location {
   display: flex;
@@ -28,6 +87,7 @@ main .location {
   opacity: 0.8;
   font-size: 12px;
 }
+
 /* Réserver */
 .reserver {
   text-align: center;
@@ -35,6 +95,7 @@ main .location {
   padding-bottom: 50px;
   padding-top: 15px;
 }
+
 .reserver h1 {
   margin-top: 10px;
   font-size: 20px;
@@ -42,11 +103,13 @@ main .location {
   margin-right: 20px;
   font-weight: bold;
 }
+
 .reserver p {
   font-weight: 100;
   font-size: 15px;
   margin: 10px;
 }
+
 .reserver button {
   color: white;
   font-size: medium;
@@ -58,21 +121,18 @@ main .location {
   border-radius: 32px;
   box-shadow: 2px 5px 15px -7px black;
   margin-top: 15px;
-  background-image: linear-gradient(
-    to  top left,
-    rgba(147, 86, 220, 0.9),
-    rgba(225, 121, 218, 0.9) 70%
-    
-  );
+  background-image: linear-gradient(to top left,
+      rgba(147, 86, 220, 0.9),
+      rgba(225, 121, 218, 0.9) 70%);
   cursor: pointer;
 }
+
 .reserver button:hover {
-  background-image: linear-gradient(
-    to top left,
-    rgba(225, 121, 218, 0.9) ,
-    rgba(147, 86, 220, 0.9)
-  );
+  background-image: linear-gradient(to top left,
+      rgba(225, 121, 218, 0.9),
+      rgba(147, 86, 220, 0.9));
 }
+
 /*Fonctionnement*/
 .function h2 {
   margin-left: 17px;
@@ -103,6 +163,7 @@ main .location {
 .function li:hover {
   background-color: #f2eafb;
 }
+
 .numbers {
   position: relative;
   left: -35px;
@@ -123,6 +184,7 @@ li i {
 li:hover i {
   color: rgba(147, 86, 220, 0.9);
 }
+
 /*Restaurants*/
 .restaurants {
   background-color: #f2f2f2;
@@ -131,10 +193,13 @@ li:hover i {
 }
 
 .restaurants h2 {
-  margin-left: 17px;
-  padding-top: 35px;
-  margin-bottom: 0;
-  font-size: 22px;
+  display: inline;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .restaurants-card {
@@ -150,6 +215,19 @@ li:hover i {
   border-radius: 16px 16px 16px 16px;
   background: white;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.new {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: #99e2d0;
+  color: rgba(0, 135, 102, 1);
+  text-align: center;
+  width: 80px;
+  height: 25px;
+  border-radius: 2px;
 }
 
 .new-card img {
@@ -157,33 +235,11 @@ li:hover i {
   width: 100%;
   object-fit: cover;
   border-radius: 16px 16px 0 0;
-}
-
-.new-card::before {
-  content: "Nouveau";
   position: relative;
-  height: 25px;
-  width: 70px;
-  background-color: #99e2d0;
-  color: rgb(19, 134, 104);
-  font-size: 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  right: 8%;
-  border-radius: 2px 2px 2px 2px;
-  z-index: 1;
-  margin-left: 85%;
 }
 
 .new-card img {
   position: relative;
-  top: -45px;
-}
-
-.new-card .text-card {
-  margin-top: -45px;
 }
 
 .card {
@@ -210,6 +266,7 @@ li a {
 
 .text-card h3 {
   margin: 9px;
+  font-weight: bold;
 }
 
 .text-card p {
@@ -217,32 +274,37 @@ li a {
   font-size: 14px;
 }
 
-.restaurants-card .like {
-  font-size: 25px;
+.like i {
+  position: absolute;
+  margin-top: 19px;
+}
+
+.like i .fa-solid .fa-heart {
   position: relative;
-  bottom: 50px;
-  left: 88%;
-  width: 60px;
+  z-index: 1;
+}
+
+.description-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .restaurants-card li .fa-solid {
   color: transparent;
-  background: linear-gradient(
-    to top,
-    rgba(147, 86, 220, 0.9),
-    rgba(225, 121, 218, 0.9)
-  );
+  background: linear-gradient(to top,
+      rgba(147, 86, 220, 0.9),
+      rgba(225, 121, 218, 0.9));
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   position: relative;
-  right: 31px;
   transition: all, 0.8s;
 }
 
 .like .fa-solid:hover {
   opacity: 1;
 }
+
 /*Footer*/
 footer {
   background-color: rgb(56, 56, 56);
@@ -262,12 +324,13 @@ footer ul li {
   padding-left: 20px;
   color: white;
 }
+
 footer ul li i {
   color: white;
 }
 
 /*Media min 700px*/
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
 
   h2 {
     text-align: center;
@@ -280,27 +343,29 @@ footer ul li i {
     justify-content: center;
     align-content: center;
   }
-}
-@media screen and (min-width: 700px) {
-  
+
   .restaurants-card {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
   }
+
   .new-card {
     width: 40vw;
   }
+
   .new-card::before {
     margin-left: 75%;
   }
+
   .card {
     width: 40vw;
   }
 }
+
 /*Media min 1200px*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 
   .new-card {
     width: 20vw;
@@ -310,4 +375,5 @@ footer ul li i {
     width: 20vw;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
