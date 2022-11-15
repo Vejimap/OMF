@@ -197,6 +197,7 @@ li:hover i {
   background-color: #f2f2f2;
   margin-top: 50px;
   padding-bottom: 50px;
+  padding-right: 30px;
 }
 
 .restaurants h2 {
@@ -211,6 +212,7 @@ li:hover i {
 .restaurants-card {
   display: flex;
   flex-direction: column;
+
 }
 
 .new {
@@ -331,6 +333,7 @@ footer ul li i {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    padding: 0;
   }
 
   .card {
