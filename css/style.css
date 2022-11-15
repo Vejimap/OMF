@@ -24,6 +24,10 @@ header {
 .search-input {
   background: transparent;
   border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: black;
 }
 
 /*Loader animation*/
@@ -83,11 +87,13 @@ main .location {
   justify-content: center;
   gap: 16px;
   background-color: #e6e6e6;
-  text-align: center;
-  opacity: 0.8;
-  font-size: 12px;
+  box-shadow: inset 0px 4px 2px rgba(221, 221, 221, 0.7);
 }
 
+main span {
+  font-size: 18px;
+  padding-left: 30px;
+}
 /* Réserver */
 .reserver {
   text-align: center;
@@ -138,6 +144,7 @@ main .location {
   margin-left: 17px;
   font-weight: bold;
   margin-top: 16px;
+  font-size: 18px;
 }
 
 .function ul {
@@ -193,11 +200,10 @@ li:hover i {
 }
 
 .restaurants h2 {
-  display: inline;
-  width: 100%;
+  display: block;
   justify-content: center;
-  margin-top: 10px;
   margin-bottom: 15px;
+  padding-top: 10px;
   font-weight: bold;
   font-size: 18px;
 }
@@ -207,17 +213,6 @@ li:hover i {
   flex-direction: column;
 }
 
-.new-card {
-  display: inline-block;
-  height: 230px;
-  width: 90%;
-  margin: 15px;
-  border-radius: 16px 16px 16px 16px;
-  background: white;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
 .new {
   position: absolute;
   right: 15px;
@@ -225,31 +220,18 @@ li:hover i {
   background-color: #99e2d0;
   color: rgba(0, 135, 102, 1);
   text-align: center;
-  width: 80px;
-  height: 25px;
   border-radius: 2px;
-}
-
-.new-card img {
-  height: 160px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 16px 16px 0 0;
-  position: relative;
-}
-
-.new-card img {
-  position: relative;
+  padding: 7px;
 }
 
 .card {
   display: inline-block;
-  height: 230px;
-  width: 90%;
+  width: 100%;
   margin: 15px;
   border-radius: 16px 16px 16px 16px;
   background: white;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .card img {
@@ -351,25 +333,13 @@ footer ul li i {
     align-content: center;
   }
 
-  .new-card {
-    width: 40vw;
-  }
-
-  .new-card::before {
-    margin-left: 75%;
-  }
-
   .card {
     width: 40vw;
   }
 }
 
 /*Media min 1200px*/
-@media screen and (min-width: 992px) {
-
-  .new-card {
-    width: 20vw;
-  }
+@media screen and (min-width: 1200px) {
 
   .card {
     width: 20vw;

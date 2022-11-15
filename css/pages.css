@@ -11,8 +11,42 @@ a {
     text-decoration: none;
     color: inherit;
 }
+.tempo1 {
+    animation: emergence 1s;  
+  }
+  .tempo2 {
+    animation: emergence 1.5s;
+  }
+  .tempo3 {
+    animation: emergence 2s;
+  }
+  .tempo4 {
+    animation: emergence 2.5s;
+  }
+  @keyframes emergence {
+    0%{
+        transform: translateY(20%);
+        opacity: 0;  
+      }
+    
+      100%{
+        transform: translateY(0);
+        }
+  }
+/*Localisation*/
+.localisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #e6e6e6;
+    text-align: center;
+    opacity: 0.8;
+    font-size: 12px;
+  }
 
 /*Header*/
+
 header {
     margin-bottom: 0;
 }
@@ -109,6 +143,7 @@ strong {
 .like .fa-solid:hover {
     opacity: 1;
 }
+
 .menu h3::after {
     content: "";
     display: block;
@@ -116,15 +151,14 @@ strong {
     padding-bottom: 6px;
     width: 40px;
 }
+
 .menu h3 {
     margin-bottom: 15px;
     font-weight: normal;
     font-size: 15px;
 }
 
-
-
-.starters {
+.steps {
     margin-left: 20px;
     gap: 12px;
     display: flex;
@@ -138,8 +172,6 @@ strong {
     justify-content: center;
     align-items: center;
     background: white;
-    width: 90%;
-    height: 55px;
     border-radius: 16px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -228,25 +260,8 @@ strong {
     }
 }
 
-.main-course {
-    margin-left: 20px;
-    gap: 12px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-
-.deserts {
-    margin-left: 20px;
-    gap: 12px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-
 .container {
     display: flex;
-    flex-direction: column;
     position: relative;
     margin-top: 30px;
 }
@@ -316,19 +331,9 @@ footer i:hover {
         margin-top: 0px;
     }
 
-    .starters {
+    .steps {
         margin-top: 60px;
-        width: 30vw;
-    }
-
-    .main-course {
-        margin-top: 60px;
-        width: 30vw;
-    }
-
-    .deserts {
-        margin-top: 60px;
-        width: 30vw;
+        width: 40vw;
     }
 }
 
